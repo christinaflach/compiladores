@@ -89,7 +89,9 @@ e o segundo o nome do arquivo de saída (com extensão .out)
 ./c-v1.1 < $1 > $2  // executa o analisador léxico com entrada lida de $1 e saída escrita em $2
 ```
 
-__Observação Importante sobre__ ___Line Endings___: Arquivos de texto criados com DOS/Windows machines usam _carriage return_ _line feed_ ("\r\n") para terminar uma linha, enquando que os criados com Unix usam apenas o _line feed_ ("\n").
+__Observação Importante sobre__ ___Line Endings___: 
+Arquivos de texto criados com DOS/Windows machines usam _carriage return_ _line feed_ ("\r\n") para terminar uma linha, 
+enquando que os criados com Unix usam apenas o _line feed_ ("\n").
 
 ## Desenvolvimento no GitHub
 
