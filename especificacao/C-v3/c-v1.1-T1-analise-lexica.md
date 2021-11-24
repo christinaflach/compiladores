@@ -29,10 +29,12 @@ __SYM__     Símbolo Léxico
 __ERROR__   Lexema do primeiro erro encontrado
 
 Comentários e caracteres de espacejamento (_white space_) devem ser descartados durante a fase de análise léxica do compilador. 
-Você deve imprimir o número da linha na qual o _token_ foi encontrado, inclusive no caso de erro. 
-O analisador léxico não deve parar após encontrar o primeiro erro léxico.
-No caso de erro, retornar o _token_ __ERROR__.
-O formato de saída é:
+
+O analisador léxico __não__ deve parar após encontrar o primeiro erro léxico.
+Deve-se imprimir o número da linha na qual o _token_ foi encontrado, inclusive em caso de erro. 
+
+No caso de erro léxico encontrado, retornar o _token_ __ERROR__.
+O formato de saída, para todas as classes de tokens é:
 
 ``` (line_num,token_class,"lexeme") ```
 
@@ -45,17 +47,9 @@ void main(void)
 }
 ```
 
-## Como executar (dois argumentos: entrada e saída)
-Seu programa deve ler um arquivo-fonte (_source_), com extensão ".c", da entrada padrão
-e escrever em outro arquivo (_target_), com extensão ".out", na saída padrão.
-
-```
-$ ./c-v1.1 < main.c > main.out
-```
-
-## Modelo de arquivo de saída gerado pelo analisador léxico
-Após a execução de ./c-v1.1, tendo como entrada o arquivo main.c (contendo um programa C-v1.1), 
-a saída gerada no arquivo main.out deverá ser:
+## Arquivo de saída gerado pelo analisador léxico (main.out)
+Após a execução do analisador léxico de c-v1.1, tendo como entrada o arquivo main.c (contendo um programa C-v1.1), 
+a saída deverá ser gerada no arquivo main.out:
 ```
 (1,KEY,"void")
 (1,ID,"main")
@@ -73,6 +67,15 @@ a saída gerada no arquivo main.out deverá ser:
 (4,NUM,"5")
 (4,SYM,";")
 (5,SYM,"}")
+``` 
+
+## Como executar (dois argumentos: entrada e saída)
+
+Seu analisador léxico deve ler um arquivo-fonte (_source_), preferencialmente com extensão ".c", da entrada padrão
+e escrever em outro arquivo (_target_), com extensão ".out", na saída padrão.
+
+```
+$ ./c-v1.1 < main.c > main.out
 ```
 
 ## Scripts
@@ -95,7 +98,4 @@ enquando que os criados com Unix usam apenas o _line feed_ ("\n").
 
 ## Desenvolvimento no GitHub
 
-A atribuição do trabalho prático 1 (TP1), com data de entrega serão realizadas no Classroom da turma.
-
-
-
+A atribuição do trabalho prático 1 (T1), com data de entrega serão realizadas no Classroom da turma.
