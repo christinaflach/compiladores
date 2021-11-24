@@ -37,10 +37,13 @@ Caracteres minúsculos e maiúsculos são diferenciados.
 
 6. Erros Léxicos para C-v1.1
 
-Erros léxicos em programas C-v1.1 que devem ser reportados:
-+ Caracter desconhecido, por exemplo, "?".
++ Erros léxicos em programas C-v1.1 que devem ser reportados:
+  + Caracter desconhecido, por exemplo, "?".
 
-A análise léxica de programas C-v1.1 __não__ deve dar suporte a:
-- tratamento de erros, por exemplo, "0a" não será tratado como erro léxico; o analisador léxico deverá retornar, separadamente, "NUM" 0 e "ID" a.
-- funcionalidades que não estão na especificação da linguagem e do trabalho T1.
++ Erros léxicos em programas C-v1.1 que __não__ devem ser reportados:
+  + ID malformado, por exemplo, "0a" não será tratado como erro léxico; o analisador léxico deverá retornar, separadamente, "NUM" 0 e "ID" a.
+  
++ A análise léxica de programas C-v1.1 __não__ deve dar suporte a: 
+  + ID malformado, por exemplo, "0a" não será tratado como erro léxico; o analisador léxico deverá retornar, separadamente, "NUM" 0 e "ID" a.
+  + Construções e funcionalidades que não estão na especificação da linguagem e do trabalho T1.
 
