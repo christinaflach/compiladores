@@ -39,9 +39,8 @@ Caracteres minúsculos e maiúsculos são diferenciados.
 
 Erros léxicos em programas C-v1.1 que devem ser reportados:
 + Caracter desconhecido, por exemplo, "?".
-+ Símbolo não definido, por exemplo, "&" 
 
 A análise léxica de programas C-v1.1 __não__ deve dar suporte a:
-- tratamento de erros, por exemplo, "0a" não será tratado como erro léxico; o analisador léxico deverá retornar, separadamento, "NUM" 0 e "ID" a.
-- caracteres e funcionalidades que não estão na especificação da linguagem.
+- tratamento de erros, por exemplo, "0a" não será tratado como erro léxico; o analisador léxico deverá retornar, separadamente, "NUM" 0 e "ID" a.
+- funcionalidades que não estão na especificação da linguagem e do trabalho T1.
 
