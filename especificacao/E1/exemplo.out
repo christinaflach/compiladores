@@ -1,0 +1,43 @@
+```
+// programa na linguagem E1 sem erros léxicos
+// palavras-chave: const int return void
+// simbolos: +  -  *  /  =  ;   (  )
+
+    int a_bar;        // na versão atual não retorna ';'
+    const int b = 25; // na versão atual não retorna '=' nem ';'
+    int c;            // na versão atual não retorna ';'
+    int q1;           // na versão atual não retorna ';'
+
+    a_bar = 40;      // na versão atual não retorna '=' nem ';'
+    c = b*b + a_bar; // na versão atual não retorna '*', '=' nem ';'
+
+    return q1 = c / (c-a); 
+    // na versão atual não retorna 'return', '=', '/', '(', ')' nem ';'
+
+```
+
+Saída para a versão atual:
+
+token code: 260, token class: INT, lexeme: int
+token code: 259, token class: ID, lexeme: a_bar
+token code: 258, token class: CONST, lexeme: const
+token code: 260, token class: INT, lexeme: int
+token code: 259, token class: ID, lexeme: b
+token code: 262, token class: NUM, lexeme: 25
+token code: 260, token class: INT, lexeme: int
+token code: 259, token class: ID, lexeme: c
+token code: 260, token class: INT, lexeme: int
+token code: 259, token class: ID, lexeme: q1
+token code: 259, token class: ID, lexeme: a_bar
+token code: 262, token class: NUM, lexeme: 40
+token code: 259, token class: ID, lexeme: c
+token code: 259, token class: ID, lexeme: b
+token code: 259, token class: ID, lexeme: b
+token code: 263, token class: PLUS, lexeme: +
+token code: 259, token class: ID, lexeme: a_bar
+token code: 259, token class: ID, lexeme: return
+token code: 259, token class: ID, lexeme: q1
+token code: 259, token class: ID, lexeme: c
+token code: 259, token class: ID, lexeme: c
+token code: 261, token class: MINUS, lexeme: -
+token code: 259, token class: ID, lexeme: a
